@@ -60,6 +60,36 @@
       "sha256": "2dd93d5613e008af27a972f0fa4bbf3f87fc5fdfb26e1ee2c4110daa782d73a4",
       "bytes": 11389,
       "filename": "fanns_medium_acorn_result.json"
+    },
+    "fanns_medium_database_attributes": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-medium/resolve/b6ae30c917d155b4fa4721a3f1cedb3819fed14b/database_attributes.jsonl",
+      "sha256": "6d09f45c631821b0bc979152af373d6f02bf32d3a4c5b197fb947f5d8da8b4e9",
+      "bytes": 40945622,
+      "filename": "database_attributes.jsonl"
+    },
+    "fanns_medium_database_vectors": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-medium/resolve/b6ae30c917d155b4fa4721a3f1cedb3819fed14b/database_vectors.fvecs",
+      "sha256": "a50f568bfb420ef5e099f9a43bd1a2ec50c0e7683d639bec355d7b977e0f43fc",
+      "bytes": 1638800000,
+      "filename": "database_vectors.fvecs"
+    },
+    "fanns_medium_em_query_attributes": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-medium/resolve/b6ae30c917d155b4fa4721a3f1cedb3819fed14b/em_query_attributes.jsonl",
+      "sha256": "525dc562d25f554b594783cb9a49a7dc3f182c96630cedaa75348ba335104252",
+      "bytes": 130000,
+      "filename": "em_query_attributes.jsonl"
+    },
+    "fanns_medium_ground_truth_em": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-medium/resolve/b6ae30c917d155b4fa4721a3f1cedb3819fed14b/ground_truth_em.ivecs",
+      "sha256": "57733930d80a98c95c2772bfa2042253275c049fcb27cb563ba3b66f2ae87689",
+      "bytes": 4038224,
+      "filename": "ground_truth_em.ivecs"
+    },
+    "fanns_medium_query_vectors": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-medium/resolve/b6ae30c917d155b4fa4721a3f1cedb3819fed14b/query_vectors.fvecs",
+      "sha256": "5c782315435e96f9ef77ae30b61a026a61cd7d86dde9335acb1fceee14c42c1f",
+      "bytes": 163880000,
+      "filename": "query_vectors.fvecs"
     }
   },
   "repositories": {
@@ -122,5 +152,7 @@
     }
   },
   "topic_d_checked_at": "2026-11-14",
-  "fanns_small_revision": "7bbad166a9a9898792285ef17d9629f64c037a4a"
+  "fanns_small_revision": "7bbad166a9a9898792285ef17d9629f64c037a4a",
+  "fanns_medium_revision": "b6ae30c917d155b4fa4721a3f1cedb3819fed14b",
+  "fanns_medium_checksum_source": "Hugging Face Git-LFS SHA-256 metadata; download verified on execution"
 }

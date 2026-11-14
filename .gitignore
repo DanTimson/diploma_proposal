@@ -13,6 +13,8 @@ __pycache__/
 
 # Review patches dropped into the project root, not fixtures elsewhere
 /*.patch
+*.patch
+*.zip
 /*.diff
 
 # Machine-local data, experiments, notes and environment receipts

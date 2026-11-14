@@ -53,7 +53,8 @@ def scores(x, q, metric):
     if metric == 'ip':
         return x @ q
     # Direct subtraction avoids catastrophic cancellation near identical vectors.
-    return -np.einsum('ij,ij->i', x - q, x - q)
+    delta = x - q
+    return -np.einsum('ij,ij->i', delta, delta)
 
 
 def select(ids, values, groups, allowed, k):
@@ -87,10 +88,13 @@ def select(ids, values, groups, allowed, k):
     return representatives[available[order]]
 
 
-def exact(w, qi, k):
+def exact(w, qi, k, block_size=2048):
     ids = np.flatnonzero(w.allowed[qi])
-    return select(ids, scores(w.vectors[ids], w.queries[qi], w.metric),
-                  w.groups, w.allowed[qi], k)
+    values = np.empty(len(ids), dtype=np.float32)
+    for offset in range(0, len(ids), block_size):
+        batch=ids[offset:offset+block_size]
+        values[offset:offset+block_size]=scores(w.vectors[batch], w.queries[qi], w.metric)
+    return select(ids, values, w.groups, w.allowed[qi], k)
 
 
 class HNSW:
@@ -130,7 +134,8 @@ class HNSW:
                               w.groups, w.allowed[qi], k)
             calls += 1
             # Having k eligible roots is NOT a certificate of exact top-k.
-            if not adaptive or len(selected) >= k or size >= limit:
+            exhausted_exact = self.is_flat and np.count_nonzero(found[0] >= 0) < size
+            if not adaptive or len(selected) >= k or size >= limit or exhausted_exact:
                 break
             size = min(size * 2, limit)
         return selected, dict(ms=(time.perf_counter()-started)*1000,
@@ -188,7 +193,7 @@ def evaluate_selection(w, qi, result, reference):
     return out
 
 
-def benchmark(w, k=10, efs=(32,128), pool=40, cap=1280, repeats=3, seed=11):
+def benchmark(w, k=10, efs=(32,128), pool=40, cap=1280, repeats=3, seed=11, progress=None):
     """Warm per-query latency, single-thread CPU, no timing pass/fail assertions."""
     import faiss
     from threadpoolctl import threadpool_limits
@@ -196,21 +201,28 @@ def benchmark(w, k=10, efs=(32,128), pool=40, cap=1280, repeats=3, seed=11):
     if k < 1 or pool < k or cap < pool or repeats < 1 or min(efs) < 1:
         raise ValueError('Require 0<k<=pool<=cap, positive repeats and ef')
     with threadpool_limits(limits=1):
+        if progress: progress('building HNSW')
         h = HNSW(w,seed=seed)
+        if progress: progress('building exact/collapse controls')
         flat = Flat(w)
         compact=collapse_identical_groups(w)
         compact_h=HNSW(compact[0],seed=seed) if compact else None
         compact_flat=Flat(compact[0]) if compact else None
+        if progress: progress('computing exact references')
         refs = [exact(w,i,k) for i in range(len(w.queries))]
         methods = [('exact_prefilter',None),('exact_faiss',None)] + [(kind,ef) for ef in efs for kind in
                     ['hnsw_fixed','hnsw_adaptive','hnsw_filtered']]
         if compact:
             methods += [('exact_collapsed_faiss',None)] + [('hnsw_collapsed',ef) for ef in efs]
         measured = {f'{kind}_ef{ef}' if ef else kind: [] for kind,ef in methods}
-        # Rotate execution order across repetitions to reduce fixed-order bias.
+        # A fixed measurement RNG is separate from the construction seed.
+        # Shuffle per query/repetition so one wrapper isn't always cache-warmed
+        # by another wrapper that performs effectively the same search.
+        order_rng=np.random.default_rng(20261114)
         for rep in range(repeats+1):
-            order = methods[rep % len(methods):] + methods[:rep % len(methods)]
+            if progress: progress(f'query repetition {rep}/{repeats} (0=warmup)')
             for qi in range(len(w.queries)):
+                order=[methods[i] for i in order_rng.permutation(len(methods))]
                 for kind,ef in order:
                     key = f'{kind}_ef{ef}' if ef else kind
                     if kind == 'exact_prefilter':
@@ -246,10 +258,11 @@ def benchmark(w, k=10, efs=(32,128), pool=40, cap=1280, repeats=3, seed=11):
             row['speedup_p50_vs_best_exact']=exact_best/row['p50_ms']
         fingerprint=hashlib.sha256()
         for array in (w.vectors,w.queries,w.groups,w.allowed):
-            fingerprint.update(np.ascontiguousarray(array).tobytes())
+            fingerprint.update(memoryview(np.ascontiguousarray(array)).cast('B'))
         return dict(workload=w.name,n=len(w.vectors),queries=len(w.queries),d=w.vectors.shape[1],
                     metric=w.metric,metadata=w.metadata,seed=seed,k=k,pool=pool,cap=cap,efs=list(efs),
                     repeats=repeats,threads=1,faiss=faiss.__version__,numpy=np.__version__,
+                    measurement_order='per-query/per-repetition shuffle; fixed RNG 20261114',
                     python=platform.python_version(),machine=platform.machine(),
                     build_parameters={'M':16,'efConstruction':100,'random_seed':seed},
                     implementation_sha256={name:hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()

@@ -11,7 +11,10 @@ from pathlib import Path, PurePosixPath
 def fetch(spec,destination):
     dest=Path(destination);dest.parent.mkdir(parents=True,exist_ok=True)
     if dest.exists():
-        h=hashlib.sha256(dest.read_bytes()).hexdigest()
+        hasher=hashlib.sha256()
+        with dest.open('rb') as existing:
+            while chunk:=existing.read(1024*1024):hasher.update(chunk)
+        h=hasher.hexdigest()
         if h==spec['sha256']:return str(dest)
         raise ValueError('Existing file has a different checksum; choose another destination')
     if not spec['url'].startswith('https://'):raise ValueError('HTTPS required')

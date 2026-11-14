@@ -124,20 +124,23 @@ def read_ivecs(path, limit=None):
     return out
 
 
-def fanns(directory, queries=64, k=10):
+def fanns(directory, queries=64, k=10, query_offset=0):
     d=Path(directory)
     x=read_fvecs(d/'database_vectors.fvecs')
-    q=read_fvecs(d/'query_vectors.fvecs',queries)
+    q=read_fvecs(d/'query_vectors.fvecs',queries+query_offset)[query_offset:]
+    if len(q)!=queries:raise ValueError('Requested query slice exceeds release')
     attrs=[json.loads(s)['number_of_sub_categories'] for s in (d/'database_attributes.jsonl').read_text().splitlines()]
-    labels=[json.loads(s)['label'] for s in (d/'em_query_attributes.jsonl').read_text().splitlines()][:len(q)]
+    labels=[json.loads(s)['label'] for s in (d/'em_query_attributes.jsonl').read_text().splitlines()][query_offset:query_offset+queries]
     if len(attrs)!=len(x) or len(labels)!=len(q):raise ValueError('FANNS attribute count mismatch')
     allowed=np.asarray(labels)[:,None]==np.asarray(attrs)[None,:]
-    w=Workload('arxiv_fanns_small_em',x,q,np.arange(len(x)),allowed,metric='l2',metadata={
-        'scope':'official small DEBUG set, not medium/large published timing experiment',
+    scale={1000:'small',100000:'medium'}.get(len(x),'custom')
+    w=Workload('arxiv_fanns_'+scale+'_em',x,q,np.arange(len(x)),allowed,metric='l2',metadata={
+        'scope':('official small DEBUG set' if scale=='small' else 'original vectors/EM; selected query subset, not paper timing reproduction'),
+        'query_offset':query_offset,'query_indices':list(range(query_offset,query_offset+queries)),
         'filter':'number_of_sub_categories == query label',
         'database_sha256':sha256(d/'database_vectors.fvecs'),
         'query_sha256':sha256(d/'query_vectors.fvecs')}).validate()
-    supplied=read_ivecs(d/'ground_truth_em.ivecs',len(q))
+    supplied=read_ivecs(d/'ground_truth_em.ivecs',queries+query_offset)[query_offset:]
     if len(supplied)!=len(q):raise ValueError('Missing ground truth rows')
     # Supplied rows may have <100 entries; use min(k, eligible) denominator.
     agreements=[]

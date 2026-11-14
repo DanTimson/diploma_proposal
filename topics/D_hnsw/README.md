@@ -1,5 +1,7 @@
 # D-001: HNSW applicability smoke
 
+**D-002 update:** `SWEEP.md` documents the bounded, resumable batch, medium FANNS inputs, independent data/index seeds, lower-memory exact search and shuffled measurement order. The D-001 results below remain historical; do not mix their timings with D-002 without rerunning the controls.
+
 Read `PROPOSAL_RU.md` for the supervisor-facing proposal, `PROTOCOL.md` for the exact question and gates, `LITERATURE.md` for prior-art limits, and `SMOKE_RESULTS.md` for measured diagnostics.
 
 This adds an executable D0/D1 runner, not a custom HNSW constructor. It uses fixed vector representations, an exact constrained reference, FAISS Flat/HNSW, candidate-budget variants and an exact-copy collapse control. Every run writes a new JSON file; an existing output is never overwritten.
