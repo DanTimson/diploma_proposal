@@ -1,0 +1,44 @@
+{
+  "topic": "Dependence-aware reputation aggregation",
+  "status": "AUDIT_AND_MECHANISM_ONLY",
+  "reproduction": "Pinned author synthetic generator and reduced CORE scorer; one-cell execution still to implement",
+  "hypothesis": "History-based dependence control improves attack-robustness without suppressing honest specialist groups",
+  "baselines": [
+    "author CORE scorer",
+    "uniform aggregation",
+    "exact-history cap",
+    "proposed dependence weighting"
+  ],
+  "planned_grid": {
+    "attacker_fraction": [
+      0,
+      0.01,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "coordination": [
+      "exact_clone",
+      "diversified_history"
+    ],
+    "honest_structure": [
+      "homogeneous",
+      "legitimate_specialists"
+    ],
+    "seeds": [
+      11,
+      29,
+      47
+    ]
+  },
+  "primary": [
+    "pollution",
+    "suppression",
+    "honest specialist retention"
+  ],
+  "gates": [
+    "Single author cell reproduces before extension",
+    "Use histories preceding target ratings only",
+    "No production Community Notes claim"
+  ]
+}

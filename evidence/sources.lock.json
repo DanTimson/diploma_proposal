@@ -1,0 +1,84 @@
+{
+  "checked_at": "2026-11-13",
+  "assets": {
+    "cn_summary": {
+      "url": "https://raw.githubusercontent.com/osome-iu/communitynotes-manipulation/2c84663a4339af1ccbc02833f70ab867ff04c111/results/bad_actor_no_bias_grid/FP_count/helpfulness_True.csv",
+      "sha256": "0c8020a1f91697dcf72d1b3daa2bfedfc909b3cac3b67635e4502920b57ba922",
+      "bytes": 1074418,
+      "filename": "cn_summary.csv"
+    },
+    "recad_ml1m": {
+      "url": "https://raw.githubusercontent.com/gusye1234/recad/701a77bba9c90c888620bb3a8f7def4a4b5eccce/data/ml1m.zip",
+      "sha256": "57cd2199a02ec7260a4c046823880602bb8c4254415e76fc65549826e5df8e22",
+      "bytes": 5246853,
+      "filename": "recad_ml1m.zip"
+    },
+    "scifact_open": {
+      "url": "https://scifact.s3.us-west-2.amazonaws.com/scifact-open/latest/scifact_open.tar.gz",
+      "sha256": "8f4dc238b2eff422bab5c7918fcbddb6996b29d37cb887942ef6ee1a16fb3415",
+      "bytes": 287369773,
+      "filename": "scifact_open.tar.gz"
+    },
+    "scifact_evaluator": {
+      "url": "https://raw.githubusercontent.com/dwadden/scifact-open/6fc2e2f2f97001f2fadb882600beb3e984d77aad/script/run_eval.py",
+      "sha256": "84c998981fe5ccc5902e5d985cc70ae778e3e4dd5a22ff41d3fbc705f0ad94f2",
+      "bytes": 6045,
+      "filename": "scifact_open_eval"
+    }
+  },
+  "repositories": {
+    "cn": {
+      "repo": "osome-iu/communitynotes-manipulation",
+      "commit": "2c84663a4339af1ccbc02833f70ab867ff04c111",
+      "branch": "main",
+      "license": null
+    },
+    "recad": {
+      "repo": "gusye1234/recad",
+      "commit": "701a77bba9c90c888620bb3a8f7def4a4b5eccce",
+      "branch": "main",
+      "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      }
+    },
+    "multivers": {
+      "repo": "dwadden/multivers",
+      "commit": "a6ce033f0e17ae38c1f102eae1ee4ca213fbbe2e",
+      "branch": "main",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      }
+    },
+    "scifact": {
+      "repo": "allenai/scifact",
+      "commit": "68b98a56d93e0f9da0d2aab4e6c3294699a0f72e",
+      "branch": "master",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    "trustgrs": {
+      "repo": "IIE-MLY/Trsut-GRS",
+      "commit": "ea36f64423852e2ca36420e38e2bba22d8bda58f",
+      "branch": "main",
+      "license": null
+    },
+    "scifact_open": {
+      "repo": "dwadden/scifact-open",
+      "commit": "6fc2e2f2f97001f2fadb882600beb3e984d77aad",
+      "license": "Not found in inspected repository; fetch externally, do not vendor."
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "task": "re-evaluate released predictions, not retraining or new inference",
+  "claims": 279,
+  "gold_pairs": 460,
+  "claims_with_both_stances": 15,
+  "sha256_claims": "ecd7a1bec2fc1b483f9127f6d0927ff17ebeb08e120088c6e037dfc85ce2b63b",
+  "sha256_predictions": "be80673ea396a36add7e544cdd4d3dcd0f9ec027678b04c336b02d3beb3f9341",
+  "models": {
+    "arsjoint": {
+      "tp": 174,
+      "predicted": 375,
+      "relevant": 460,
+      "precision": 0.464,
+      "recall": 0.3782608695652174,
+      "f1": 0.4167664670658683
+    },
+    "multivers_10": {
+      "tp": 245,
+      "predicted": 492,
+      "relevant": 460,
+      "precision": 0.49796747967479676,
+      "recall": 0.532608695652174,
+      "f1": 0.5147058823529411
+    },
+    "multivers_20": {
+      "tp": 187,
+      "predicted": 254,
+      "relevant": 460,
+      "precision": 0.7362204724409449,
+      "recall": 0.40652173913043477,
+      "f1": 0.5238095238095238
+    },
+    "paragraph_joint": {
+      "tp": 214,
+      "predicted": 391,
+      "relevant": 460,
+      "precision": 0.5473145780051151,
+      "recall": 0.4652173913043478,
+      "f1": 0.5029377203290247
+    },
+    "vert5erini": {
+      "tp": 309,
+      "predicted": 1237,
+      "relevant": 460,
+      "precision": 0.2497978981406629,
+      "recall": 0.6717391304347826,
+      "f1": 0.3641720683559222
+    }
+  },
+  "warning": "Pooled annotation; unjudged treated as NEI only to match official metric."
+}

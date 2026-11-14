@@ -1,0 +1,11 @@
+{
+  "topic": "Coordinated-profile influence in recommendation",
+  "status": "RESERVE_BLOCKED",
+  "reproduction": "RecAD Table 2 ML1M target HR@10",
+  "gates": [
+    "Recover target victim budget seed recipe",
+    "Explicit validation/test paths",
+    "Reproduce one attack baseline",
+    "Confirm model and split metric denominators"
+  ]
+}

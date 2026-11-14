@@ -1,0 +1,46 @@
+{
+  "task": "recompute authors stored synthetic summary; no scorer rerun",
+  "sha256": "0c8020a1f91697dcf72d1b3daa2bfedfc909b3cac3b67635e4502920b57ba922",
+  "rows": 3380,
+  "max_abs_metric_errors": {
+    "pollution": 1.1102230246251565e-16,
+    "suppression": 1.1102230246251565e-16,
+    "infiltration": 9.71445146547012e-17,
+    "waste": 9.82287168271867e-17
+  },
+  "selected_cells": [
+    {
+      "attacker_fraction": 0.0,
+      "attack_frequency": 1.0,
+      "pollution": 0.31019572143832497,
+      "suppression": 0.4315453863465866,
+      "infiltration": 0.09292337060267249,
+      "waste": 0.14744329104190695
+    },
+    {
+      "attacker_fraction": 0.05,
+      "attack_frequency": 1.0,
+      "pollution": 0.3264018691588785,
+      "suppression": 0.44621590472531697,
+      "infiltration": 0.094430174395025,
+      "waste": 0.1477735368956743
+    },
+    {
+      "attacker_fraction": 0.1,
+      "attack_frequency": 1.0,
+      "pollution": 0.3296076099881094,
+      "suppression": 0.4504873294346979,
+      "infiltration": 0.09320780094149293,
+      "waste": 0.14631212408990188
+    },
+    {
+      "attacker_fraction": 0.2,
+      "attack_frequency": 1.0,
+      "pollution": 1.0,
+      "suppression": 1.0,
+      "infiltration": 0.08529551469091402,
+      "waste": 0.2807981646481353
+    }
+  ],
+  "production_cn_claim": false
+}

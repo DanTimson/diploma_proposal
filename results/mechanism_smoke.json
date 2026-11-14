@@ -1,0 +1,18 @@
+{
+  "status": "synthetic mechanism check only; not benchmark evidence",
+  "A_notes": {
+    "uniform": 0.2,
+    "history_cap": 0.6666666666666666,
+    "failure_case": "The same cap applies if the eight identical histories are independent honest specialists."
+  },
+  "B_evidence": {
+    "ordinary_top2": [
+      "copy0",
+      "copy1"
+    ],
+    "origin_unique_top2": [
+      "copy0",
+      "counter"
+    ]
+  }
+}

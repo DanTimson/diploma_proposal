@@ -1,0 +1,17 @@
+A: comparison contract and next implementation
+
+**Reproduction track.** Pin `osome-iu/communitynotes-manipulation` at `2c84663a4339af1ccbc02833f70ab867ff04c111`; initialize its scorer submodule at the recorded revision (README links core commit `c671476411c3503ec0be5cacb8518bd404671ecc`). Inspect and record actual submodule revision after checkout. Preserve original generator, thresholds, parameters, seeding and reduced scorer. The stored `bad_actor_no_bias_grid/FP_count/helpfulness_True.csv` is the first source artifact. Our audit checks counts and rate calculations; it does not establish simulation reproducibility.
+
+Upstream driver: `bash experiments/run_all_experiments.sh bad_actor_no_bias_grid True`. This is a grid and includes compilation, generation and scoring. Do NOT launch the full grid as the first test. First inspect `experiments/definitions.json`, `experiments/run_all_experiments.sh` and generator CLI, select one actual parameter cell, record the exact command, then reproduce it. A one-cell runner is a next-stage deliverable, not included as a fake completed adapter.
+
+**Metric definitions.** With h = truly helpful, u = truly unhelpful, H = published and U = unpublished: suppression = n_hU/n_h; pollution = n_uH/n_H; infiltration = n_uH/n_u; waste = n_hU/n_U. A zero denominator is undefined, not zero. The upstream results README has conditional-probability wording inconsistent with two displayed formulas; use the count formulas and code. The downloaded CSV agrees with these formulas.
+
+**Experimental track.** Add histories and held-out target events to a separately versioned generator. Methods see only features; evaluation receives latent truth and attacker identities in a separate file. Use five fixed seeds for exploratory work, then an independently frozen final seed list. Model exposure patterns and missing observations explicitly. Correct-minority and specialist controls must be generated independently of the proposed score. Optimize the attacker under the same budgets for each defense.
+
+Starting baselines: uniform weights; the exact reduced author scorer; group influence caps; history-similarity weights. Add a faithful QS-MF implementation only after its release and evaluation recipe have been checked. Current production CN is mandatory for claims of production superiority but is outside the minimum synthetic study. Do not relabel the bundled history-cap probe as a CN defense.
+
+**Primary experiment.** Plot target suppression/promotion versus benign retention over attacker fractions and historical-action budgets. Include equal-account and equal-action comparisons. Compare at fixed pollution or false-suppression thresholds chosen on validation data. Test transfer to unseen attack strategies. Preserve a result even when adaptive diversification defeats the method.
+
+**Before November 19.** Implement and run one pinned author baseline cell; add a pilot generator with history/target separation; implement one group-cap baseline and one candidate dependence estimator; save seeds, model/scorer hashes and parameters; demonstrate that latent labels cannot enter features. Large sweeps may remain scheduled in the run plan, but the launch path must have been exercised.
+
+**Stop rule.** If only exact clone attacks improve, or a method loses its benefit when compared at equal specialist retention, narrow to a limits/measurement study or select topic B. Do not spend the week building identity infrastructure, blockchain integration or a new HNSW constructor.

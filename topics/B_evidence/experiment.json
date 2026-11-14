@@ -1,0 +1,45 @@
+{
+  "topic": "Evidence preservation under a fixed retrieval budget",
+  "status": "SAVED_PREDICTION_REPLAY_COMPLETE_SELECTION_HARNESS_PENDING",
+  "reproduction": "SciFact-Open Table 5 released prediction replay",
+  "baselines": [
+    "score_top_k",
+    "exact_text_dedup",
+    "MMR",
+    "predicted_stance_quota",
+    "soft_coverage"
+  ],
+  "planned_grid": {
+    "k": [
+      5,
+      10,
+      20
+    ],
+    "copies_per_document": [
+      0,
+      1,
+      5,
+      20
+    ],
+    "seeds": [
+      11,
+      29,
+      47
+    ]
+  },
+  "primary": [
+    "signed evidence Recall@k",
+    "precision",
+    "non-evidence burden"
+  ],
+  "diagnostic": [
+    "both-stance coverage on 15 claims",
+    "duplicate-origin coverage"
+  ],
+  "gates": [
+    "Candidate feature adapter without gold fields",
+    "Report candidate ceiling",
+    "Keep fixed-candidate and full-corpus evaluation separate",
+    "No gold provenance used by realistic selector"
+  ]
+}
