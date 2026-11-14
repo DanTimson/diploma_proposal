@@ -1,4 +1,6 @@
-Diploma proposal starters — 13 November 2026
+Diploma proposal starters — updated 14 November 2026
+
+**Current priority: D first.** Start with `topics/D_hnsw/README.md` and its `PROTOCOL.md`. D tests whether HNSW offers a useful application-level quality/cost trade-off before committing to graph modifications. A and B remain the fallback research proposals; C remains conditional. The original A/B audits below remain valid and unchanged. Topic D is delivered through a review patch, not a remote repository write.
 
 Two eligible proposals and one conditional reserve for the November 19–24 selection window. Weekend review: November 14–15. These are inception-stage packages corresponding to the requested “5–10%”: question, prior results, accessible artifacts, evaluation contract and small tested tools. They are not completed diplomas and contain no new scientific performance claim.
 

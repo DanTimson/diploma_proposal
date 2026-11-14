@@ -1,5 +1,7 @@
 Diploma selection brief — prepared 13 November 2026
 
+**Decision update, 14 November.** At the user's request, prioritize a fourth topic D: HNSW-based constrained retrieval across related evidence/recommendation workloads. Test ordinary HNSW, simple preprocessing, filtered retrieval and bounded adaptive search before designing graph changes. Advance D only on a useful measured frontier; otherwise resume A/B. The previous recommendation below is retained as the historical selection rationale, not the current execution order. See `topics/D_hnsw/` for the runnable diagnostic and progression gates.
+
 **Decision.** Take two prepared research proposals into the November 14–15 weekend: A, robustness of reputation aggregation; B, preservation of conflicting evidence during scientific retrieval. Keep C, recommender poisoning defense, as a conditional reserve. Both recommended topics can be supervised in ML/statistical learning or NLP/IR without depending on the previous HNSW-construction project or its supervisor.
 
 | Proposal | Current status | Strongest reason to choose | Main unresolved risk |

@@ -1,0 +1,23 @@
+# Python environments and generated package files
+/.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+/htmlcov/
+
+# Review patches dropped into the project root, not fixtures elsewhere
+/*.patch
+/*.diff
+
+# Machine-local data, experiments, notes and environment receipts
+/.local/
+/external/
+/local-runs/
+
+# Keep reviewed results/, source locks, configs and documentation trackable.

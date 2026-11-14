@@ -1,0 +1,33 @@
+{
+  "status": "RUNNABLE_SMOKE_NOT_FULL_PAPER_REPRODUCTION",
+  "priority": "D before A/B",
+  "entrypoint": "diploma-ann",
+  "metric_contract": "PROTOCOL.md",
+  "k": 10,
+  "M": 16,
+  "efConstruction": 100,
+  "efs": [
+    32,
+    128
+  ],
+  "pool": 40,
+  "cap": 1280,
+  "seed": 11,
+  "repeats": 3,
+  "threads": 1,
+  "cases": [
+    "synthetic_clean",
+    "synthetic_copies",
+    "synthetic_sparse_filter",
+    "synthetic_adverse_filter",
+    "scifact_pool_lsa",
+    "recad_ml1m_train_svd",
+    "arxiv_fanns_small_em"
+  ],
+  "not_implemented": [
+    "custom graph construction",
+    "ACORN/PathSeer adapters",
+    "full-corpus SciFact retrieval",
+    "social reputation propagation"
+  ]
+}

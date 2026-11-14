@@ -24,6 +24,42 @@
       "sha256": "84c998981fe5ccc5902e5d985cc70ae778e3e4dd5a22ff41d3fbc705f0ad94f2",
       "bytes": 6045,
       "filename": "scifact_open_eval"
+    },
+    "fanns_small_database_vectors": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-small/resolve/7bbad166a9a9898792285ef17d9629f64c037a4a/database_vectors.fvecs",
+      "sha256": "4b7b674aa315a888be5e4c740887c84c5d5c95ed6725ac2dcaa7da7263d70d50",
+      "bytes": 16388000,
+      "filename": "database_vectors.fvecs"
+    },
+    "fanns_small_query_vectors": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-small/resolve/7bbad166a9a9898792285ef17d9629f64c037a4a/query_vectors.fvecs",
+      "sha256": "5c782315435e96f9ef77ae30b61a026a61cd7d86dde9335acb1fceee14c42c1f",
+      "bytes": 163880000,
+      "filename": "query_vectors.fvecs"
+    },
+    "fanns_small_database_attributes": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-small/resolve/7bbad166a9a9898792285ef17d9629f64c037a4a/database_attributes.jsonl",
+      "sha256": "d0ab61e9dec120fa1b843418f661ff6c01a8d1ee858681fcb78cd8c1abf1456b",
+      "bytes": 407117,
+      "filename": "database_attributes.jsonl"
+    },
+    "fanns_small_em_query_attributes": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-small/resolve/7bbad166a9a9898792285ef17d9629f64c037a4a/em_query_attributes.jsonl",
+      "sha256": "7d529cf896cca43513c33627b6d4f3352b14e7069a2f50ced2aa157a1687fa5e",
+      "bytes": 130000,
+      "filename": "em_query_attributes.jsonl"
+    },
+    "fanns_small_ground_truth_em": {
+      "url": "https://huggingface.co/datasets/SPCL/arxiv-for-fanns-small/resolve/7bbad166a9a9898792285ef17d9629f64c037a4a/ground_truth_em.ivecs",
+      "sha256": "be4c65d48bced70a08e389bd3f11cd4d224015502d391bcaa615aa9c2017c57c",
+      "bytes": 3890856,
+      "filename": "ground_truth_em.ivecs"
+    },
+    "fanns_medium_acorn_result": {
+      "url": "https://raw.githubusercontent.com/spcl/fanns-benchmark/ca8f0c2a9bfc0122669fecb412eaa564718ab221/results_medium/arxiv_em_ACORN.json",
+      "sha256": "2dd93d5613e008af27a972f0fa4bbf3f87fc5fdfb26e1ee2c4110daa782d73a4",
+      "bytes": 11389,
+      "filename": "fanns_medium_acorn_result.json"
     }
   },
   "repositories": {
@@ -79,6 +115,12 @@
       "repo": "dwadden/scifact-open",
       "commit": "6fc2e2f2f97001f2fadb882600beb3e984d77aad",
       "license": "Not found in inspected repository; fetch externally, do not vendor."
+    },
+    "fanns": {
+      "repo": "spcl/fanns-benchmark",
+      "commit": "ca8f0c2a9bfc0122669fecb412eaa564718ab221"
     }
-  }
+  },
+  "topic_d_checked_at": "2026-11-14",
+  "fanns_small_revision": "7bbad166a9a9898792285ef17d9629f64c037a4a"
 }
