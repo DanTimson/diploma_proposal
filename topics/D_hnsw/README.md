@@ -53,3 +53,11 @@ diploma-ann --out local-runs/d-100k-seed29.json --queries 128 --seed 29 --efs 64
 ```
 
 This harness keeps a dense query-by-item eligibility mask, suitable for bounded diagnostics. Do not use it for millions of items and thousands of queries without replacing masks with per-query bitmap/sparse predicate providers. Large raw data, generated models and runs stay under ignored `external/` and `local-runs/`. No third-party datasets or source trees are included in the patch.
+
+## D-003: diverse-search baseline and joint-constraint screen
+
+See [d003/README.md](d003/README.md) for runnable commands,
+[d003/DATA_AUDIT.md](d003/DATA_AUDIT.md) for dataset/reproduction status,
+[d003/RESULTS.md](d003/RESULTS.md) for the measured adaptation, and
+[d003/DECISION.md](d003/DECISION.md) for the next decision.
+D-001/D-002 results are preserved; D-003 changes the protocol and adds item recall.
