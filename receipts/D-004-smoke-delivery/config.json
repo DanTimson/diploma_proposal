@@ -1,0 +1,31 @@
+{
+  "command": "screen",
+  "workload": "local-runs/D-004-smoke-data",
+  "out": "local-runs/D-004-smoke-delivery",
+  "split": "tune",
+  "k": 10,
+  "budgets": [
+    32,
+    128,
+    512
+  ],
+  "pool": 200,
+  "group_caps": [
+    1,
+    4,
+    16,
+    0
+  ],
+  "efs": [
+    128,
+    512
+  ],
+  "hnsw_cap": 5000,
+  "selectivities": [
+    0.1,
+    0.01
+  ],
+  "repeats": 1,
+  "index_seed": 11,
+  "cache_dir": ".local/d004-native"
+}

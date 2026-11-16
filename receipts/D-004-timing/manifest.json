@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "workload_sha256": "d47f353fb161a600de3ddccf89d491ff18f23c84b36a2554e508b2b7df9cfe07",
+  "numpy": "2.5.4",
+  "faiss": "1.12.0",
+  "python": "3.12.14",
+  "source_sha256": "8e3431e3925c576e61f358bd2b46695e57e95d9eeb8783f3e13107774edf7f45",
+  "graph_native": {
+    "source_sha256": "553f48779dc81b830b6cffa1caa838bd6173be9df810b13ab00b01cfc9999c09",
+    "binary_sha256": "6f981466cbd721f4c224b63a6b258216d4404066ad6ab16aee37afe0ef3ed882",
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+    "flags": [
+      "-O3",
+      "-std=c++17",
+      "-shared",
+      "-fPIC"
+    ],
+    "accumulation": "float64"
+  },
+  "exact_native": {
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+    "flags": [
+      "-O3",
+      "-std=c++17",
+      "-shared",
+      "-fPIC"
+    ],
+    "source_sha256": "0cd67f052fbfb72a9a6d95e9d80fa03d92538ef2134a4f464908d0eca22d9ab8",
+    "binary_sha256": "90ec5bcaa816acdd5e536c7870f86d3cf62033a16c9260ea5be0e465929570c1",
+    "accumulation": "float64"
+  },
+  "graph_hash": "4e4ba68edbf35e084e81b8c1287bb551ba7d1377e1ddf82ca6d974d9b930362a",
+  "hnsw_build_seconds": 42.145123153999975,
+  "index_bytes": 78410722,
+  "exported_edges_bytes": 51200000,
+  "split": "tune",
+  "query_ids": [
+    9885,
+    4514,
+    5128,
+    7410,
+    4743,
+    2986,
+    8979,
+    22,
+    7362,
+    1365,
+    1096,
+    4451,
+    1206,
+    3908,
+    985,
+    751,
+    5944,
+    2831,
+    4733,
+    2479,
+    2267,
+    9570,
+    6232,
+    2880,
+    2966,
+    3444,
+    8460,
+    8793,
+    6346,
+    4947,
+    51,
+    6963
+  ],
+  "timing": "Single CPU thread; warmup + repetitions; median per query. Resume/restart rows are cumulative across checkpoints, including selection.",
+  "warning": "Custom level-0 unbounded-frontier best-first control, fixed entry; not FAISS HNSW/ACORN/DiskANN search. Caps apply to candidate shortlist, NOT traversal."
+}

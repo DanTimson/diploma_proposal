@@ -1,0 +1,54 @@
+[
+  {
+    "condition": "both-0.01",
+    "method": "acorn1_pool100_ef512",
+    "queries": 8,
+    "item_recall": 1.0,
+    "group_recall": 1.0,
+    "fill": 1.0,
+    "distance_evaluations": null,
+    "expanded": null,
+    "p50_ms": 0.095298,
+    "p95_ms": 0.1127955,
+    "violations": 0
+  },
+  {
+    "condition": "both-0.01",
+    "method": "acorn1_pool500_ef512",
+    "queries": 8,
+    "item_recall": 1.0,
+    "group_recall": 1.0,
+    "fill": 1.0,
+    "distance_evaluations": null,
+    "expanded": null,
+    "p50_ms": 0.0958345,
+    "p95_ms": 0.10174670000000001,
+    "violations": 0
+  },
+  {
+    "condition": "both-0.1",
+    "method": "acorn1_pool100_ef512",
+    "queries": 8,
+    "item_recall": 1.0,
+    "group_recall": 1.0,
+    "fill": 1.0,
+    "distance_evaluations": null,
+    "expanded": null,
+    "p50_ms": 1.1498545,
+    "p95_ms": 1.1840602,
+    "violations": 0
+  },
+  {
+    "condition": "both-0.1",
+    "method": "acorn1_pool500_ef512",
+    "queries": 8,
+    "item_recall": 1.0,
+    "group_recall": 1.0,
+    "fill": 1.0,
+    "distance_evaluations": null,
+    "expanded": null,
+    "p50_ms": 1.4504775,
+    "p95_ms": 1.5912235,
+    "violations": 0
+  }
+]

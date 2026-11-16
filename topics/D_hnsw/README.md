@@ -61,3 +61,9 @@ See [d003/README.md](d003/README.md) for runnable commands,
 [d003/RESULTS.md](d003/RESULTS.md) for the measured adaptation, and
 [d003/DECISION.md](d003/DECISION.md) for the next decision.
 D-001/D-002 results are preserved; D-003 changes the protocol and adds item recall.
+# D-004 follow-up
+
+The next controlled experiment is documented in [d004/README.md](d004/README.md):
+fresh queries, fixed database metadata, true continuation versus restarts,
+and an adapter to the actual ACORN implementation. See its results before
+interpreting D-003 failures as an opportunity for a new graph algorithm.

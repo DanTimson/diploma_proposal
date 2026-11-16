@@ -1,0 +1,25 @@
+-- Could NOT find MKL (missing: MKL_LIBRARIES) 
+CMake Warning (dev) at /workspace/scratch/1491b8bf0a5c/topic-d-apply-check/.venv/lib/python3.12/site-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1953 (message):
+  Calling FetchContent_Populate(nlohmann_json) is deprecated, call
+  FetchContent_MakeAvailable(nlohmann_json) instead.  Policy CMP0169 can be
+  set to OLD to allow FetchContent_Populate(nlohmann_json) to be called
+  directly for now, but the ability to call it with declared details will be
+  removed completely in a future version.
+Call Stack (most recent call first):
+  CMakeLists.txt:76 (FetchContent_Populate)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Deprecation Warning at build/_deps/nlohmann_json-src/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Using the single-header code from /workspace/scratch/1491b8bf0a5c/d004-acorn/build/_deps/nlohmann_json-src/single_include/
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/scratch/1491b8bf0a5c/d004-acorn/build
+[100%] Built target faiss

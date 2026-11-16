@@ -1,0 +1,11 @@
+{
+  "command": "prepare",
+  "dataset": "sift",
+  "n": 100000,
+  "old_queries": 64,
+  "queries": 64,
+  "data_seed": 20261115,
+  "query_seed": 20261116,
+  "data_dir": "external/sift1m",
+  "out": "local-runs/D-004-sift-data"
+}

@@ -1,0 +1,4 @@
+{
+  "note": "The module was imported before the export-upstream CLI was added; the original manifest hashed the file after index construction. imported_source.py matches the initial smoke source hash; manifest_source.py matches the manifest hash. Only export CLI support changed, not screen computations. The sequential timing rerun uses manifest_source.py.",
+  "imported_source_sha256": "1d1ea3b6ba835fbc73474126c4b6ebb33261ef36105ff0b6055e75e87a0d4515"
+}

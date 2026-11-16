@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "workload_sha256": "e306422ec173d01c6a0705699bebbcaa77776c28d1a4a1e8af6c1febf8aa18d2",
+  "numpy": "2.5.4",
+  "faiss": "1.12.0",
+  "python": "3.12.14",
+  "source_sha256": "9d6f039f805772426b8483f184987599d435e2f468af54e05d53e970ec9f7a68",
+  "graph_native": {
+    "source_sha256": "553f48779dc81b830b6cffa1caa838bd6173be9df810b13ab00b01cfc9999c09",
+    "binary_sha256": "6f981466cbd721f4c224b63a6b258216d4404066ad6ab16aee37afe0ef3ed882",
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+    "flags": [
+      "-O3",
+      "-std=c++17",
+      "-shared",
+      "-fPIC"
+    ],
+    "accumulation": "float64"
+  },
+  "exact_native": {
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+    "flags": [
+      "-O3",
+      "-std=c++17",
+      "-shared",
+      "-fPIC"
+    ],
+    "source_sha256": "0cd67f052fbfb72a9a6d95e9d80fa03d92538ef2134a4f464908d0eca22d9ab8",
+    "binary_sha256": "90ec5bcaa816acdd5e536c7870f86d3cf62033a16c9260ea5be0e465929570c1",
+    "accumulation": "float64"
+  },
+  "graph_hash": "fb959d5a7886c575a101366c9a5c4978b590a4b8c96bb1127e2c0fe0d6ced75c",
+  "hnsw_build_seconds": 0.05163764400003856,
+  "index_bytes": 527938,
+  "exported_edges_bytes": 512000,
+  "split": "tune",
+  "query_ids": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71
+  ],
+  "timing": "Single CPU thread; warmup + repetitions; median per query. Resume/restart rows are cumulative across checkpoints, including selection.",
+  "warning": "Custom level-0 unbounded-frontier best-first control, fixed entry; not FAISS HNSW/ACORN/DiskANN search. Caps apply to candidate shortlist, NOT traversal."
+}

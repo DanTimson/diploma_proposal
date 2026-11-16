@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/workspace/scratch/1491b8bf0a5c/d004-work/.local/d004-native/acorn_probe",
+    "/workspace/scratch/1491b8bf0a5c/d004-work/local-runs/D-004-sift-data/base.bin",
+    "/workspace/scratch/1491b8bf0a5c/d004-work/local-runs/D-004-acorn800-timing/query.bin",
+    "/workspace/scratch/1491b8bf0a5c/d004-work/local-runs/D-004-acorn800-timing/masks.u8",
+    "/workspace/scratch/1491b8bf0a5c/d004-work/local-runs/D-004-acorn800-timing/groups.i64",
+    "/workspace/scratch/1491b8bf0a5c/d004-work/local-runs/D-004-acorn800-timing/metadata.i32",
+    "/workspace/scratch/1491b8bf0a5c/d004-work/local-runs/D-004-acorn800-timing/both-0.01-acorn1_pool800_ef512.bin",
+    "100",
+    "800",
+    "512",
+    "1",
+    "11",
+    "3"
+  ],
+  "log": "both-0.01-acorn1_pool800_ef512.log"
+}

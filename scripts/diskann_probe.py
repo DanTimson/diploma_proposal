@@ -41,6 +41,7 @@ def main():
     p.add_argument('--out',required=True);p.add_argument('--lists',nargs='+',type=int,default=[200,800,3200])
     p.add_argument('--build-threads',type=int,default=1);p.add_argument('--timeout',type=int,default=1800)
     p.add_argument('--num-diverse',type=int,default=1,help='Upstream construction blocker threshold; not a final output cap')
+    p.add_argument('--group-caps',nargs='+',type=int,default=[1,4],help='Positive upstream per-seller search caps')
     p.add_argument('--cache-dir',default='.local/d003-native');a=p.parse_args()
     run=Path(a.run_dir).resolve();up=Path(a.upstream).resolve();out=Path(a.out).resolve()
     if subprocess.check_output(['git','-C',str(up),'rev-parse','HEAD'],text=True).strip()!=REV:p.error('Wrong upstream revision')
@@ -50,7 +51,7 @@ def main():
     config=json.loads((run/'config.json').read_text());manifest=json.loads((run/'manifest.json').read_text())
     if digest(run/'workload.npz')!=manifest['workload_sha256']:p.error('Workload hash mismatch')
     data=dict(np.load(run/'workload.npz',allow_pickle=False));x,q,g=data['vectors'],data['queries'],data['groups'];k=config['k']
-    if a.build_threads<1 or a.timeout<1 or a.num_diverse<1 or any(v<k or v>len(x) for v in a.lists):p.error('Bad thread count/budget/list size')
+    if a.build_threads<1 or a.timeout<1 or a.num_diverse<1 or any(v<k or v>len(x) for v in a.lists) or min(a.group_caps)<1 or len(set(a.group_caps))!=len(a.group_caps):p.error('Bad thread count/budget/list size/group caps')
     out.mkdir(parents=True,exist_ok=False);commands=[];rows=[];raw=[]
     def execute(argv,name):
         t=time.perf_counter()
@@ -66,7 +67,8 @@ def main():
         if build=='diverse':argv+=['--seller_file',run/'groups.txt','--NumDiverse',str(a.num_diverse)]
         print('BUILD',build,flush=True);execute(argv,'build-'+build)
         if build=='standard':shutil.copyfile(run/'groups.txt',str(prefix)+'_sellers.txt')
-        for search,per_group in ([('ordinary',0),('diverse',1),('diverse',4)] if build=='standard' else [('diverse',1),('diverse',4)]):
+        modes=([('ordinary',0)] if build=='standard' else [])+[('diverse',cap) for cap in a.group_caps]
+        for search,per_group in modes:
             for L in a.lists:
                 name=f'{build}-{search}-cap{per_group}-L{L}';print('SEARCH',name,flush=True)
                 result=out/name
@@ -85,7 +87,7 @@ def main():
                         if len(bad):raise ValueError('Upstream returned out-of-range IDs')
                         got=choose(x,q[qi],g,masks[qi],ids[qi],k,grouped)
                         ref=native.search(q[qi],masks[qi],k,grouped)
-                        row=dict(condition=cond,query=qi,method=name,split='tuning' if qi<len(q)//2 else 'confirmation',
+                        row=dict(condition=cond,query=qi,method=name,split=config.get('split','tuning' if qi<len(q)//2 else 'confirmation'),
                                  **evaluate(x,q[qi],g,masks[qi],got,ref,grouped))
                         rows.append(row);raw.append(dict(condition=cond,query=qi,method=name,ids=got.tolist(),reference=ref.tolist()))
                 write_json(out/f'{name}.metrics.json',[r for r in rows if r['method']==name])

@@ -1,0 +1,22 @@
+{
+  "workload": "local-runs/D-004-sift-data",
+  "out": "local-runs/D-004-acorn-timing",
+  "upstream": "../d004-acorn",
+  "binary": ".local/d004-native/acorn_probe",
+  "split": "tune",
+  "k": 100,
+  "pools": [
+    3200
+  ],
+  "gamma": 1,
+  "efs": [
+    512
+  ],
+  "index_seed": 11,
+  "selectivities": [
+    0.1,
+    0.01
+  ],
+  "repeats": 3,
+  "timeout": 1800
+}

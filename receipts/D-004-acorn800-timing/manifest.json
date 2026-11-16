@@ -1,0 +1,11 @@
+{
+  "workload_sha256": "d47f353fb161a600de3ddccf89d491ff18f23c84b36a2554e508b2b7df9cfe07",
+  "upstream_revision": "c259f11cdbec880671658eaa0d8747e2cc9de79d",
+  "source_sha256": "6b43174c54a2fa91d045003e9f9628810c726f518e9a95470d8d246ff0c099af",
+  "adapter_sha256": "bf82bef82b1ad40ce829e2a9ea2fe6c497d66c8d0215833148f93f27ce84eccc",
+  "binary_sha256": "31cbe4654499c958f2b16dfb08dbb332f804a6cee3a32bf914736c0121dda264",
+  "upstream_library_sha256": "0c4774e1b7ac325363dcb37eb5dbb68e1335c1e70a83fd3d0af79e46947eeb61",
+  "cmake_diff": "diff --git a/CMakeLists.txt b/CMakeLists.txt\nindex 76ba69b..2ae7c8f 100644\n--- a/CMakeLists.txt\n+++ b/CMakeLists.txt\n@@ -77,7 +77,7 @@ if(NOT nlohmann_json_POPULATED)\n     add_subdirectory(${nlohmann_json_SOURCE_DIR} ${nlohmann_json_BINARY_DIR})\n endif()\n \n-target_include_directories(faiss PUBLIC ${nlohmann_json_SOURCE_DIR}/include)\n+target_include_directories(faiss PUBLIC $<BUILD_INTERFACE:${nlohmann_json_SOURCE_DIR}/include>)\n \n find_package(ZLIB REQUIRED)\n target_link_libraries(faiss PUBLIC ${ZLIB_LIBRARIES})\n",
+  "timing": "Single thread, warmup + repeats. Per-query median includes upstream search and exact rerank/group selection; excludes build, loading and IPC.",
+  "scope": "Unmodified upstream search/construction; adapted SIFT/synthetic metadata. Gamma=1 is not the whole ACORN family."
+}

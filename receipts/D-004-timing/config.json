@@ -1,0 +1,27 @@
+{
+  "command": "screen",
+  "workload": "local-runs/D-004-sift-data",
+  "out": "local-runs/D-004-timing",
+  "split": "tune",
+  "k": 100,
+  "budgets": [
+    512,
+    2048
+  ],
+  "pool": 5000,
+  "group_caps": [
+    1,
+    16
+  ],
+  "efs": [
+    512
+  ],
+  "hnsw_cap": 5000,
+  "selectivities": [
+    0.1,
+    0.01
+  ],
+  "repeats": 3,
+  "index_seed": 11,
+  "cache_dir": ".local/d004-native"
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "condition": "both-0.01",
+    "method": "acorn1_pool3200_ef512",
+    "queries": 32,
+    "item_recall": 0.9959375000000001,
+    "group_recall": 0.9959375000000001,
+    "fill": 1.0,
+    "distance_evaluations": null,
+    "expanded": null,
+    "p50_ms": 19.355516,
+    "p95_ms": 21.6613188,
+    "violations": 0
+  },
+  {
+    "condition": "both-0.1",
+    "method": "acorn1_pool3200_ef512",
+    "queries": 32,
+    "item_recall": 0.9990625,
+    "group_recall": 0.9990625,
+    "fill": 1.0,
+    "distance_evaluations": null,
+    "expanded": null,
+    "p50_ms": 85.250214,
+    "p95_ms": 98.7583504,
+    "violations": 0
+  }
+]
