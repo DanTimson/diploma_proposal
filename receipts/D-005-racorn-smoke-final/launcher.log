@@ -1,0 +1,43 @@
+base: 1000 x 16d (0.5 ms)
+volume missing; building (1 threads, n=1000)... done (27.4 ms), saved /workspace/scratch/1491b8bf0a5c/d005-work/local-runs/D-005-racorn-smoke-final/volumes/sift_1000_16_m16_ef100.usearch
+queries: 8 of 8
+
+=== selectivity 10% a=+0 (allowlist size 100) ===
+  c_e: mean 0.0236 p10 -0.0212 p90 0.0740 (alpha 0.0000)
+  computing GT... done (0.0 ms)
+  Prefilter ef=0 -> recall=1.0000 lat=0.00ms qps=337467
+  Prefilter-scan ef=0 -> recall=1.0000 lat=0.00ms qps=91447
+  HNSW ef=32 -> recall=1.0000 lat=0.05ms qps=10639
+  ACORN-1 ef=32 -> recall=1.0000 lat=0.09ms qps=8833
+  RACORN-1 ef=32 br=2.000000 -> recall=1.0000 lat=0.03ms qps=23810
+
+=== selectivity 10% a=-0.8 (allowlist size 100) ===
+  correlated: 80/100 from farthest (alpha=-0.800)
+  c_e: mean -0.7162 p10 -0.7338 p90 -0.7019 (alpha -0.8000)
+  computing GT... done (0.0 ms)
+  Prefilter ef=0 -> recall=1.0000 lat=0.00ms qps=190186
+  Prefilter-scan ef=0 -> recall=1.0000 lat=0.00ms qps=173917
+  HNSW ef=32 -> recall=1.0000 lat=0.11ms qps=7353
+  ACORN-1 ef=32 -> recall=1.0000 lat=0.06ms qps=12826
+  RACORN-1 ef=32 br=2.000000 -> recall=1.0000 lat=0.06ms qps=13686
+
+=== selectivity 50% a=+0 (allowlist size 500) ===
+  c_e: mean 0.0052 p10 -0.0245 p90 0.0284 (alpha 0.0000)
+  computing GT... done (0.1 ms)
+  Prefilter ef=0 -> recall=1.0000 lat=0.00ms qps=207480
+  Prefilter-scan ef=0 -> recall=1.0000 lat=0.01ms qps=92229
+  HNSW ef=32 -> recall=1.0000 lat=0.02ms qps=61951
+  ACORN-1 ef=32 -> recall=1.0000 lat=0.01ms qps=84013
+  RACORN-1 ef=32 br=2.000000 -> recall=1.0000 lat=0.01ms qps=56095
+
+=== selectivity 50% a=-0.8 (allowlist size 500) ===
+  correlated: 400/500 from farthest (alpha=-0.800)
+  c_e: mean -0.4010 p10 -0.4037 p90 -0.3983 (alpha -0.8000)
+  computing GT... done (0.1 ms)
+  Prefilter ef=0 -> recall=1.0000 lat=0.00ms qps=209216
+  Prefilter-scan ef=0 -> recall=1.0000 lat=0.01ms qps=91762
+  HNSW ef=32 -> recall=1.0000 lat=0.04ms qps=22472
+  ACORN-1 ef=32 -> recall=1.0000 lat=0.07ms qps=12752
+  RACORN-1 ef=32 br=2.000000 -> recall=1.0000 lat=0.05ms qps=18278
+Wrote JSON: /workspace/scratch/1491b8bf0a5c/d005-work/local-runs/D-005-racorn-smoke-final/upstream.json (20 rows)
+done.

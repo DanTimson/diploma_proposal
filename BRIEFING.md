@@ -1,4 +1,10 @@
-Diploma selection brief — prepared 13 November 2026
+Diploma selection brief — updated 16 November 2026
+
+**Current decision:** see [round-3 adjudication](topics/D_hnsw/d005/REVIEW.md).
+No original HNSW method is yet supported. D remains a possible measurement
+study; B now has an executed selection/copy pilot with separate document and
+signed-prediction ceilings. A remains the original reputation-oriented option.
+The dated decisions below preserve the earlier rationale, not current status.
 
 **Decision update, 14 November.** At the user's request, prioritize a fourth topic D: HNSW-based constrained retrieval across related evidence/recommendation workloads. Test ordinary HNSW, simple preprocessing, filtered retrieval and bounded adaptive search before designing graph changes. Advance D only on a useful measured frontier; otherwise resume A/B. The previous recommendation below is retained as the historical selection rationale, not the current execution order. See `topics/D_hnsw/` for the runnable diagnostic and progression gates.
 

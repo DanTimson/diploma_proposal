@@ -1,0 +1,8 @@
+{
+  "mode": "smoke",
+  "n": 100000,
+  "upstream": "../d005-racorn",
+  "data_dir": "external/sift1m",
+  "out": "local-runs/D-005-racorn-smoke-final",
+  "timeout": 7200
+}

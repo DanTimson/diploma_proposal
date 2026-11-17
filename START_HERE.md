@@ -1,36 +1,34 @@
-# D-004 — frontier and filtering controls
+# D-005 decision round
 
-Applies to repository commit 33e1b20 (D smoke tests). No remote changes were made.
-Read D-004-results.md first. Existing ACORN-1 largely fixes the earlier strict-filter
-recall failure; exact prefiltering is faster on this 100k workload. This is not
-positive evidence for a new graph algorithm. Thirty-two held-out queries remain unused.
+Base: 0c3ed5e (test runs). No remote repository changes were made.
+Read ROUND3-REVIEW.md for the adjudication and measured FANNS/B/kernel checks.
+The next user-run experiment is same-graph RACORN calibration, replacing the
+previously suggested blind over-fetch expansion as the immediate priority.
 
-Extract D-004-frontier-controls.patch into your repository root, then:
+Extract the patch into the project root, then:
 
 ```bash
-git apply --check D-004-frontier-controls.patch
-git apply D-004-frontier-controls.patch
+git apply --check D-005-decision-round.patch
+git apply D-005-decision-round.patch
 source .venv/bin/activate
 python -m unittest discover -s tests -v
-bash scripts/run_d004.sh smoke
-python scripts/package_d004.py --out D-004-review.zip local-runs/D-004-smoke
+bash scripts/setup_racorn.sh
+python scripts/run_racorn_control.py smoke --out local-runs/D-005-racorn-smoke
+python scripts/run_racorn_control.py pilot --n 100000 --out local-runs/D-005-racorn-100k
+python scripts/run_racorn_control.py pilot --n 1000000 --out local-runs/D-005-racorn-1m
+python scripts/package_d004.py --out D-005-review.zip local-runs/D-005-racorn-smoke local-runs/D-005-racorn-100k local-runs/D-005-racorn-1m
 ```
 
-Send D-004-review.zip. Default tests run 47 tests with one external integration
-skip; all 47 passed here with ACORN built. The patch applies cleanly to your updated
-commit. Smoke runs need no download or ACORN installation. Use a new output name
-if that directory already exists (`bash scripts/run_d004.sh smoke local-runs/D-004-smoke-2`).
+Run sequentially and stop if a command fails. Send D-005-review.zip after
+completion, or the failed run's launcher.log. New output directories are
+required. The 100k/1M runs are prepared but not executed in this delivery.
+Keep the D-004 held-out queries unused; the runner uses development IDs only.
 
-The supplied pilot is already executed; no need to rerun it merely to read its
-results. If desired, `bash scripts/run_d004.sh prepare` then `bash scripts/run_d004.sh
-pilot` reproduce the development experiment. Allow several minutes plus the initial
-~525 MB download; the full grid took ~104 seconds here. Commands for actual ACORN
-and expanded official DiskANN search are in D-004-guide.md. The latter is prepared
-but not run in these receipts. Do not launch simultaneous jobs for timing comparisons.
+Expected tests: 50 run, 49 pass, one optional original-ACORN test skipped.
+The pinned RACORN driver was compiled and smoke-tested separately.
+RUN_GUIDE.md explains runtime estimates, scope, prerequisites, and optional
+reproduction commands for the already executed metadata/kernel/B checks.
 
-Receipts include per-query outputs and references, configuration/source hashes,
-raw logs and query-split metadata. Large datasets, graph files and compiled binaries
-are excluded. Early full-grid runs overlapped and are quality-only evidence;
-D-004-timing / D-004-acorn*-timing are the sequential timing evidence. One pilot
-source-hash timing discrepancy is explained in its provenance-note.json, with
-both source versions retained; the measured computations were unchanged.
+The sparse exact backend is optional; old dense behavior and stored D-004
+results remain unchanged. The B pilot tests literal copies and text dedup,
+not new inference, full-corpus retrieval, natural independence, or ANN utility.

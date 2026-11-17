@@ -1,0 +1,62 @@
+test_empty_singleton_and_all_masks (test_acorn_integration.ACORNIntegration.test_empty_singleton_and_all_masks) ... skipped 'Set D004_ACORN_BINARY after setup_acorn.sh'
+test_adaptive_budget_is_explicit (test_ann.ANN.test_adaptive_budget_is_explicit) ... <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+ok
+test_benchmark_smoke_schema_and_constraints (test_ann.ANN.test_benchmark_smoke_schema_and_constraints) ... ok
+test_collapse_requires_vectors_and_eligibility_identical (test_ann.ANN.test_collapse_requires_vectors_and_eligibility_identical) ... ok
+test_empty_mask_not_fake_perfect_recall (test_ann.ANN.test_empty_mask_not_fake_perfect_recall) ... ok
+test_filter_and_exact_group_member_representative (test_ann.ANN.test_filter_and_exact_group_member_representative) ... ok
+test_gold_never_changes_index_or_retrieval (test_ann.ANN.test_gold_never_changes_index_or_retrieval) ... ok
+test_invalid_vectors_rejected (test_ann.ANN.test_invalid_vectors_rejected) ... ok
+test_ip_not_silently_normalized (test_ann.ANN.test_ip_not_silently_normalized) ... ok
+test_known_l2_order (test_ann.ANN.test_known_l2_order) ... ok
+test_missing_candidate_sentinel_ignored (test_ann.ANN.test_missing_candidate_sentinel_ignored) ... ok
+test_native_filter_and_group_cap (test_ann.ANN.test_native_filter_and_group_cap) ... ok
+test_partition_selection_matches_exhaustive_objective (test_ann.ANN.test_partition_selection_matches_exhaustive_objective) ... ok
+test_ties_are_stable_and_groups_not_counted_twice (test_ann.ANN.test_ties_are_stable_and_groups_not_counted_twice) ... ok
+test_vector_readers_variable_ground_truth_length (test_ann.ANN.test_vector_readers_variable_ground_truth_length) ... ok
+test_cap_before_filter_can_hide_eligible_representative (test_frontier_screen.Frontier.test_cap_before_filter_can_hide_eligible_representative) ... ok
+test_disconnected_graph_is_not_falsely_exhaustive (test_frontier_screen.Frontier.test_disconnected_graph_is_not_falsely_exhaustive) ... ok
+test_full_traversal_matches_exact_every_mask (test_frontier_screen.Frontier.test_full_traversal_matches_exact_every_mask) ... ok
+test_invalid_edges_and_closed_or_decreasing_session (test_frontier_screen.Frontier.test_invalid_edges_and_closed_or_decreasing_session) ... ok
+test_query_count_does_not_change_database (test_frontier_screen.Frontier.test_query_count_does_not_change_database) ... ok
+test_resume_matches_restart_and_avoids_repeated_distances (test_frontier_screen.Frontier.test_resume_matches_restart_and_avoids_repeated_distances) ... ok
+test_equal_distance_stable_and_empty (test_group_screen.GroupScreen.test_equal_distance_stable_and_empty) ... ok
+test_factorial_masks_nested_and_data_fixed (test_group_screen.GroupScreen.test_factorial_masks_nested_and_data_fixed) ... ok
+test_group_recall_does_not_hide_bad_representative (test_group_screen.GroupScreen.test_group_recall_does_not_hide_bad_representative) ... ok
+test_invalid_duplicate_and_ineligible_are_reported (test_group_screen.GroupScreen.test_invalid_duplicate_and_ineligible_are_reported) ... ok
+test_native_matches_exhaustive_constrained_sets (test_group_screen.GroupScreen.test_native_matches_exhaustive_constrained_sets) ... ok
+test_native_rejects_unsafe_shapes (test_group_screen.GroupScreen.test_native_rejects_unsafe_shapes) ... ok
+test_category_sets_are_order_invariant (test_round3.Round3.test_category_sets_are_order_invariant) ... ok
+test_copy_dedup_invariance_and_slot_crowding (test_round3.Round3.test_copy_dedup_invariance_and_slot_crowding) ... ok
+test_sparse_exact_matches_dense_all_masks_ties_and_unique_groups (test_round3.Round3.test_sparse_exact_matches_dense_all_masks_ties_and_unique_groups) ... ok
+test_archive_traversal_rejected (test_starters.Metrics.test_archive_traversal_rejected) ... ok
+test_clone_mass_invariant (test_starters.Metrics.test_clone_mass_invariant) ... ok
+test_cold_start_not_protected (test_starters.Metrics.test_cold_start_not_protected) ... ok
+test_different_error_denominators (test_starters.Metrics.test_different_error_denominators) ... ok
+test_diversified_histories_escape_exact_cap (test_starters.Metrics.test_diversified_histories_escape_exact_cap) ... ok
+test_duplicate_target_rating_rejected (test_starters.Metrics.test_duplicate_target_rating_rejected) ... ok
+test_gold_labels_do_not_affect_selection (test_starters.Metrics.test_gold_labels_do_not_affect_selection) ... ok
+test_missing_evidence_penalizes_recall (test_starters.Metrics.test_missing_evidence_penalizes_recall) ... ok
+test_seen_target_excluded_seen_items_masked (test_starters.Metrics.test_seen_target_excluded_seen_items_masked) ... ok
+test_unjudged_is_fp_in_official_protocol (test_starters.Metrics.test_unjudged_is_fp_in_official_protocol) ... ok
+test_wrong_stance_is_not_true_positive (test_starters.Metrics.test_wrong_stance_is_not_true_positive) ... ok
+test_blocking_preserves_exact_selection (test_sweep.BlockedReference.test_blocking_preserves_exact_selection) ... ok
+test_atomic_json_and_receipt_integrity (test_sweep.Sweep.test_atomic_json_and_receipt_integrity) ... ok
+test_cancel_terminates_child (test_sweep.Sweep.test_cancel_terminates_child) ... ok
+test_child_memory_limit_is_applied (test_sweep.Sweep.test_child_memory_limit_is_applied) ... ok
+test_failure_isolated_success_resumed_and_plan_guarded (test_sweep.Sweep.test_failure_isolated_success_resumed_and_plan_guarded) ... 2026-11-16T19:07:48+00:00 START bad
+2026-11-16T19:07:48+00:00 FAILED bad
+2026-11-16T19:07:48+00:00 START good
+2026-11-16T19:07:48+00:00 COMPLETE good
+ok
+test_plan_rejects_duplicate_ids (test_sweep.Sweep.test_plan_rejects_duplicate_ids) ... ok
+test_plan_rejects_forward_dependencies (test_sweep.Sweep.test_plan_rejects_forward_dependencies) ... ok
+test_stop_refuses_reused_pid (test_sweep.Sweep.test_stop_refuses_reused_pid) ... ok
+test_timeout_terminates_child (test_sweep.Sweep.test_timeout_terminates_child) ... ok
+
+----------------------------------------------------------------------
+Ran 50 tests in 3.709s
+
+OK (skipped=1)

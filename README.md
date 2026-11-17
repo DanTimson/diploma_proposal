@@ -1,4 +1,11 @@
-Diploma proposal starters — updated 14 November 2026
+Diploma proposal starters — decision update 16 November 2026
+
+**Current entry point:** [round-3 review and measured checks](topics/D_hnsw/d005/REVIEW.md)
+and [D-005/B-001 commands](topics/D_hnsw/d005/README.md). D-004 and the expanded
+upstream comparison establish benefits of existing diverse search, not a new
+HNSW contribution. The next bounded control uses the actual RACORN artifact;
+a FANNS grouping audit and a B saved-prediction copy pilot are now executed.
+The earlier proposal text below is retained as historical context.
 
 **Current priority: D first.** Start with `topics/D_hnsw/README.md` and its `PROTOCOL.md`. D tests whether HNSW offers a useful application-level quality/cost trade-off before committing to graph modifications. A and B remain the fallback research proposals; C remains conditional. The original A/B audits below remain valid and unchanged. Topic D is delivered through a review patch, not a remote repository write.
 

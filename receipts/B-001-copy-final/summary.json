@@ -1,0 +1,650 @@
+[
+  {
+    "copies": 0,
+    "k": 5,
+    "method": "score_topk",
+    "signed_hits": 179,
+    "gold_pairs": 460,
+    "signed_recall": 0.38913043478260867,
+    "document_recall": 0.6239130434782608,
+    "document_hits": 287,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.12831541218637993,
+    "selected_slots": 1395,
+    "distinct_origin_slots": 1395,
+    "unjudged_slots": 1108,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 93,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 0,
+    "k": 5,
+    "method": "text_dedup",
+    "signed_hits": 179,
+    "gold_pairs": 460,
+    "signed_recall": 0.38913043478260867,
+    "document_recall": 0.6239130434782608,
+    "document_hits": 287,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.12831541218637993,
+    "selected_slots": 1395,
+    "distinct_origin_slots": 1395,
+    "unjudged_slots": 1108,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 93,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 0,
+    "k": 10,
+    "method": "score_topk",
+    "signed_hits": 185,
+    "gold_pairs": 460,
+    "signed_recall": 0.40217391304347827,
+    "document_recall": 0.7195652173913043,
+    "document_hits": 331,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.06630824372759857,
+    "selected_slots": 2790,
+    "distinct_origin_slots": 2790,
+    "unjudged_slots": 2459,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 99,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 0,
+    "k": 10,
+    "method": "text_dedup",
+    "signed_hits": 185,
+    "gold_pairs": 460,
+    "signed_recall": 0.40217391304347827,
+    "document_recall": 0.7195652173913043,
+    "document_hits": 331,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.06630824372759857,
+    "selected_slots": 2790,
+    "distinct_origin_slots": 2790,
+    "unjudged_slots": 2459,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 99,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 0,
+    "k": 20,
+    "method": "score_topk",
+    "signed_hits": 187,
+    "gold_pairs": 460,
+    "signed_recall": 0.40652173913043477,
+    "document_recall": 0.7978260869565217,
+    "document_hits": 367,
+    "both_stance_documents_covered": 11,
+    "unique_correct_per_slot": 0.03351254480286738,
+    "selected_slots": 5580,
+    "distinct_origin_slots": 5580,
+    "unjudged_slots": 5213,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 101,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 0,
+    "k": 20,
+    "method": "text_dedup",
+    "signed_hits": 187,
+    "gold_pairs": 460,
+    "signed_recall": 0.40652173913043477,
+    "document_recall": 0.7978260869565217,
+    "document_hits": 367,
+    "both_stance_documents_covered": 11,
+    "unique_correct_per_slot": 0.03351254480286738,
+    "selected_slots": 5580,
+    "distinct_origin_slots": 5580,
+    "unjudged_slots": 5213,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 101,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 1,
+    "k": 5,
+    "method": "score_topk",
+    "signed_hits": 178,
+    "gold_pairs": 460,
+    "signed_recall": 0.3869565217391304,
+    "document_recall": 0.5891304347826087,
+    "document_hits": 271,
+    "both_stance_documents_covered": 8,
+    "unique_correct_per_slot": 0.12759856630824373,
+    "selected_slots": 1395,
+    "distinct_origin_slots": 1116,
+    "unjudged_slots": 945,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 92,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 1,
+    "k": 5,
+    "method": "text_dedup",
+    "signed_hits": 179,
+    "gold_pairs": 460,
+    "signed_recall": 0.38913043478260867,
+    "document_recall": 0.6239130434782608,
+    "document_hits": 287,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.12831541218637993,
+    "selected_slots": 1395,
+    "distinct_origin_slots": 1395,
+    "unjudged_slots": 1108,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 93,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 1,
+    "k": 10,
+    "method": "score_topk",
+    "signed_hits": 184,
+    "gold_pairs": 460,
+    "signed_recall": 0.4,
+    "document_recall": 0.7130434782608696,
+    "document_hits": 328,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.06594982078853047,
+    "selected_slots": 2790,
+    "distinct_origin_slots": 2511,
+    "unjudged_slots": 2283,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 98,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 1,
+    "k": 10,
+    "method": "text_dedup",
+    "signed_hits": 185,
+    "gold_pairs": 460,
+    "signed_recall": 0.40217391304347827,
+    "document_recall": 0.7195652173913043,
+    "document_hits": 331,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.06630824372759857,
+    "selected_slots": 2790,
+    "distinct_origin_slots": 2790,
+    "unjudged_slots": 2459,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 99,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 1,
+    "k": 20,
+    "method": "score_topk",
+    "signed_hits": 187,
+    "gold_pairs": 460,
+    "signed_recall": 0.40652173913043477,
+    "document_recall": 0.7956521739130434,
+    "document_hits": 366,
+    "both_stance_documents_covered": 10,
+    "unique_correct_per_slot": 0.03351254480286738,
+    "selected_slots": 5580,
+    "distinct_origin_slots": 5301,
+    "unjudged_slots": 5035,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 101,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 1,
+    "k": 20,
+    "method": "text_dedup",
+    "signed_hits": 187,
+    "gold_pairs": 460,
+    "signed_recall": 0.40652173913043477,
+    "document_recall": 0.7978260869565217,
+    "document_hits": 367,
+    "both_stance_documents_covered": 11,
+    "unique_correct_per_slot": 0.03351254480286738,
+    "selected_slots": 5580,
+    "distinct_origin_slots": 5580,
+    "unjudged_slots": 5213,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 101,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 5,
+    "k": 5,
+    "method": "score_topk",
+    "signed_hits": 144,
+    "gold_pairs": 460,
+    "signed_recall": 0.3130434782608696,
+    "document_recall": 0.38913043478260867,
+    "document_hits": 179,
+    "both_stance_documents_covered": 0,
+    "unique_correct_per_slot": 0.1032258064516129,
+    "selected_slots": 1395,
+    "distinct_origin_slots": 279,
+    "unjudged_slots": 500,
+    "both_stances_covered": 0,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 71,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 73,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 5,
+    "k": 5,
+    "method": "text_dedup",
+    "signed_hits": 179,
+    "gold_pairs": 460,
+    "signed_recall": 0.38913043478260867,
+    "document_recall": 0.6239130434782608,
+    "document_hits": 287,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.12831541218637993,
+    "selected_slots": 1395,
+    "distinct_origin_slots": 1395,
+    "unjudged_slots": 1108,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 93,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 5,
+    "k": 10,
+    "method": "score_topk",
+    "signed_hits": 179,
+    "gold_pairs": 460,
+    "signed_recall": 0.38913043478260867,
+    "document_recall": 0.6239130434782608,
+    "document_hits": 287,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.06415770609318996,
+    "selected_slots": 2790,
+    "distinct_origin_slots": 1395,
+    "unjudged_slots": 1608,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 93,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 5,
+    "k": 10,
+    "method": "text_dedup",
+    "signed_hits": 185,
+    "gold_pairs": 460,
+    "signed_recall": 0.40217391304347827,
+    "document_recall": 0.7195652173913043,
+    "document_hits": 331,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.06630824372759857,
+    "selected_slots": 2790,
+    "distinct_origin_slots": 2790,
+    "unjudged_slots": 2459,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 99,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 5,
+    "k": 20,
+    "method": "score_topk",
+    "signed_hits": 187,
+    "gold_pairs": 460,
+    "signed_recall": 0.40652173913043477,
+    "document_recall": 0.7717391304347826,
+    "document_hits": 355,
+    "both_stance_documents_covered": 10,
+    "unique_correct_per_slot": 0.03351254480286738,
+    "selected_slots": 5580,
+    "distinct_origin_slots": 4185,
+    "unjudged_slots": 4330,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 101,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 5,
+    "k": 20,
+    "method": "text_dedup",
+    "signed_hits": 187,
+    "gold_pairs": 460,
+    "signed_recall": 0.40652173913043477,
+    "document_recall": 0.7978260869565217,
+    "document_hits": 367,
+    "both_stance_documents_covered": 11,
+    "unique_correct_per_slot": 0.03351254480286738,
+    "selected_slots": 5580,
+    "distinct_origin_slots": 5580,
+    "unjudged_slots": 5213,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 101,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 20,
+    "k": 5,
+    "method": "score_topk",
+    "signed_hits": 144,
+    "gold_pairs": 460,
+    "signed_recall": 0.3130434782608696,
+    "document_recall": 0.38913043478260867,
+    "document_hits": 179,
+    "both_stance_documents_covered": 0,
+    "unique_correct_per_slot": 0.1032258064516129,
+    "selected_slots": 1395,
+    "distinct_origin_slots": 279,
+    "unjudged_slots": 500,
+    "both_stances_covered": 0,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 71,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 73,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 20,
+    "k": 5,
+    "method": "text_dedup",
+    "signed_hits": 179,
+    "gold_pairs": 460,
+    "signed_recall": 0.38913043478260867,
+    "document_recall": 0.6239130434782608,
+    "document_hits": 287,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.12831541218637993,
+    "selected_slots": 1395,
+    "distinct_origin_slots": 1395,
+    "unjudged_slots": 1108,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 93,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 20,
+    "k": 10,
+    "method": "score_topk",
+    "signed_hits": 144,
+    "gold_pairs": 460,
+    "signed_recall": 0.3130434782608696,
+    "document_recall": 0.38913043478260867,
+    "document_hits": 179,
+    "both_stance_documents_covered": 0,
+    "unique_correct_per_slot": 0.05161290322580645,
+    "selected_slots": 2790,
+    "distinct_origin_slots": 279,
+    "unjudged_slots": 1000,
+    "both_stances_covered": 0,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 71,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 73,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 20,
+    "k": 10,
+    "method": "text_dedup",
+    "signed_hits": 185,
+    "gold_pairs": 460,
+    "signed_recall": 0.40217391304347827,
+    "document_recall": 0.7195652173913043,
+    "document_hits": 331,
+    "both_stance_documents_covered": 9,
+    "unique_correct_per_slot": 0.06630824372759857,
+    "selected_slots": 2790,
+    "distinct_origin_slots": 2790,
+    "unjudged_slots": 2459,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 99,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 20,
+    "k": 20,
+    "method": "score_topk",
+    "signed_hits": 144,
+    "gold_pairs": 460,
+    "signed_recall": 0.3130434782608696,
+    "document_recall": 0.38913043478260867,
+    "document_hits": 179,
+    "both_stance_documents_covered": 0,
+    "unique_correct_per_slot": 0.025806451612903226,
+    "selected_slots": 5580,
+    "distinct_origin_slots": 279,
+    "unjudged_slots": 2000,
+    "both_stances_covered": 0,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 71,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 73,
+        "total": 211
+      }
+    }
+  },
+  {
+    "copies": 20,
+    "k": 20,
+    "method": "text_dedup",
+    "signed_hits": 187,
+    "gold_pairs": 460,
+    "signed_recall": 0.40652173913043477,
+    "document_recall": 0.7978260869565217,
+    "document_hits": 367,
+    "both_stance_documents_covered": 11,
+    "unique_correct_per_slot": 0.03351254480286738,
+    "selected_slots": 5580,
+    "distinct_origin_slots": 5580,
+    "unjudged_slots": 5213,
+    "both_stances_covered": 2,
+    "both_stance_claims": 15,
+    "by_stance": {
+      "SUPPORT": {
+        "hits": 101,
+        "total": 249
+      },
+      "CONTRADICT": {
+        "hits": 86,
+        "total": 211
+      }
+    }
+  }
+]

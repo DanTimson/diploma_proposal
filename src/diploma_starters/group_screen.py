@@ -56,13 +56,14 @@ def make_data(kind,n,nq,seed,data_dir):
     return dict(vectors=x,queries=q,groups=groups,ranks=ranks,buckets=buckets,base_ids=bids,query_ids=qids)
 
 class NativeExact:
-    def __init__(self,x,groups,cache):
+    def __init__(self,x,groups,cache,implementation='dense'):
+        if implementation not in ('dense','sparse'):raise ValueError('Unknown exact implementation')
         x=np.ascontiguousarray(x,dtype='f4');groups=np.ascontiguousarray(groups,dtype='i8')
         if x.ndim!=2 or not all(x.shape) or groups.shape!=(len(x),) or not np.isfinite(x).all():
             raise ValueError('Invalid exact-search vectors/groups')
         if np.any(groups<0) or np.any(groups>=len(x)):raise ValueError('Group ID out of range')
         cache=Path(cache);cache.mkdir(parents=True,exist_ok=True)
-        source=ROOT/'native/exact_groups.cpp';compiler=os.environ.get('CXX','g++')
+        source=ROOT/('native/exact_groups_sparse.cpp' if implementation=='sparse' else 'native/exact_groups.cpp');compiler=os.environ.get('CXX','g++')
         version=subprocess.check_output([compiler,'--version'],text=True).splitlines()[0]
         key=hashlib.sha256((digest(source)+version+platform.machine()).encode()).hexdigest()[:20]
         lib=cache/f'exact-{key}.so'
@@ -78,7 +79,7 @@ class NativeExact:
             ctypes.c_int64,ctypes.c_int,ctypes.c_int,ctypes.c_int,ptr(np.int64,flags='C_CONTIGUOUS')]
         self.fn.restype=ctypes.c_int
         self.x=np.ascontiguousarray(x,dtype='f4');self.groups=np.ascontiguousarray(groups,dtype='i8')
-        self.metadata=dict(compiler=version,flags=['-O3','-std=c++17','-shared','-fPIC'],
+        self.metadata=dict(implementation=implementation,compiler=version,flags=['-O3','-std=c++17','-shared','-fPIC'],
             source_sha256=digest(source),binary_sha256=digest(lib),accumulation='float64')
     def search(self,q,mask,k,grouped):
         q=np.ascontiguousarray(q,dtype='f4');mask=np.asarray(mask,dtype=bool)

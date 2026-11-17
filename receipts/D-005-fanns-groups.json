@@ -1,0 +1,73 @@
+{
+  "sha256": "6d09f45c631821b0bc979152af373d6f02bf32d3a4c5b197fb947f5d8da8b4e9",
+  "source_sha256": "45ffabc107fff7c873fa58b649b745177a657fe92f05c76af7855f4477edcdb9",
+  "items": 100000,
+  "exact_subcategory_set": {
+    "groups": 8397,
+    "largest_group": 3171,
+    "largest_fraction": 0.03171,
+    "fraction_items_in_nonsingleton_groups": 0.94767
+  },
+  "exact_author_set": {
+    "groups": 96024,
+    "largest_group": 53,
+    "largest_fraction": 0.00053,
+    "fraction_items_in_nonsingleton_groups": 0.06973
+  },
+  "multi_author_items": 81289,
+  "distinct_author_strings": 261182,
+  "repeated_author_strings": 74170,
+  "by_filter_value": [
+    {
+      "number_of_sub_categories": 1,
+      "eligible": 52817,
+      "category_groups": 149
+    },
+    {
+      "number_of_sub_categories": 2,
+      "eligible": 29941,
+      "category_groups": 2053
+    },
+    {
+      "number_of_sub_categories": 3,
+      "eligible": 12040,
+      "category_groups": 3112
+    },
+    {
+      "number_of_sub_categories": 4,
+      "eligible": 3786,
+      "category_groups": 1925
+    },
+    {
+      "number_of_sub_categories": 5,
+      "eligible": 1163,
+      "category_groups": 922
+    },
+    {
+      "number_of_sub_categories": 6,
+      "eligible": 216,
+      "category_groups": 200
+    },
+    {
+      "number_of_sub_categories": 7,
+      "eligible": 31,
+      "category_groups": 30
+    },
+    {
+      "number_of_sub_categories": 8,
+      "eligible": 3,
+      "category_groups": 3
+    },
+    {
+      "number_of_sub_categories": 9,
+      "eligible": 1,
+      "category_groups": 1
+    },
+    {
+      "number_of_sub_categories": 10,
+      "eligible": 2,
+      "category_groups": 2
+    }
+  ],
+  "interpretation": "Category-set groups are a valid partition but do not imply source independence. One-per-author with all coauthors is overlapping set exclusion, not this objective. Author strings are not disambiguated identities."
+}

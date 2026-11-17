@@ -1,0 +1,32 @@
+{
+  "config": {
+    "data_dir": "../research-cache/scifact-open",
+    "out": "local-runs/B-001-copy-final",
+    "model": "multivers_20"
+  },
+  "source_sha256": "705c7321a43ef4351a9cd8ae0b6203ea80e78b4bd7c0d3f9721b4a535eb0b6f4",
+  "inputs": {
+    "claims.jsonl": "ecd7a1bec2fc1b483f9127f6d0927ff17ebeb08e120088c6e037dfc85ce2b63b",
+    "model_predictions.parqet": "be80673ea396a36add7e544cdd4d3dcd0f9ec027678b04c336b02d3beb3f9341",
+    "corpus_candidates.jsonl": "664801e5088c177cd09c01bb410b61e73312bf393f88726f2b9ffb8416f44e0f"
+  },
+  "scope": "Fixed 50-candidate released predictions, not full-corpus retrieval or source-independence estimation.",
+  "injection": "Exact copies of highest-confidence candidate per claim; no gold-driven targeting; deterministic, no seed sweep.",
+  "metric": "Unique correct signed origins / all signed gold pairs. Precision-like unique_correct_per_slot penalizes wasted duplicate slots; not official pair precision. Unjudged does not mean scientifically false.",
+  "ceiling": {
+    "correct_signed_pairs": 187,
+    "gold_pairs": 460,
+    "recall": 0.40652173913043477,
+    "retrievable_gold_documents": 438,
+    "both_signed": 2,
+    "both_documents": 15
+  },
+  "official_saved_prediction_replay": {
+    "tp": 187,
+    "predicted": 254,
+    "relevant": 460,
+    "precision": 0.7362204724409449,
+    "recall": 0.40652173913043477,
+    "f1": 0.5238095238095238
+  }
+}
